@@ -1,0 +1,307 @@
+:root {
+    --main-color: #4aaaa5;
+    --hover-color: teal;
+    --nav-padding: 25px;
+    --container-left: 50px;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+html, body {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: #777777;
+    background-image: url("../images/concrete_seamless.png");
+    background-repeat: repeat;
+    height: 100vh;
+}
+
+.container {
+    margin-left: var(--container-left);
+    width: 960px;
+    min-height: 100%;
+    /* margin: 0 auto; */
+}
+
+.inner {
+    margin-top: 35px;
+}
+
+h1, h2 {
+    font-weight: bold;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    margin: 0;
+    color: var(--main-color);
+}
+
+h1 {
+    color: #fff;
+    font-size:40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    color: #fff;
+}
+
+p, .info-list li {
+    font-size: 20px;
+    line-height: 2em;
+}
+
+
+/* Nav Bar */
+nav {
+    border-bottom: 1px solid #cccccc;
+    background-color: #fff;
+    width: 100%;
+}
+
+.top-name {
+    float: left;
+    background-color: var(--main-color);
+    padding: var(--nav-padding);
+    margin-left: var(--container-left);
+}
+
+.menu {
+    width: 251px;
+    float: right;
+    padding: 10px;
+    margin: var(--nav-padding);
+}
+
+.menu li {
+    float: right;
+    border-left: 1px solid #ddd;
+    padding: 0 15px;
+}
+
+li.border-none {
+    border-left: none;
+}
+
+.menu li a:link {
+    text-decoration: none;
+    color: #777777;
+}
+
+.menu li a:visited, .menu li a:active {
+    text-decoration: none;
+    color: var(--hover-color);
+}
+
+.menu li a:hover {
+    text-decoration: none;
+    text-shadow: 1px 1px 2px  #000;
+}
+
+
+
+/* Section */
+section {
+    border: 1px solid #dddddd;
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 130px;
+}
+
+hr {
+    margin: 0px 15px 30px 15px;
+    border-top: 1px solid #dddddd;
+}
+
+.spacer::after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #666666;
+    border-top: 7px solid var(--main-color);
+    color: #fff;
+    text-align: center;
+    padding-top: 25px;
+    margin-top: -80px;
+}
+
+.copyright {
+    bottom: 0px;
+    font-weight: normal;
+}
+
+
+
+/* Index page */
+#me-pic {
+    width: 35%;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.info-list {
+    list-style-type: square;
+    margin-left: 70px;
+    margin-top: -10px;
+}
+
+
+
+/* Portfoilo page */
+.box img {
+    width: 100%;
+}
+
+.box {
+    width: 44%;
+    float: left;
+    margin: 20px;
+    opacity: .7;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.title {
+    background-color: var(--main-color);
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 60%;
+    z-index: 2;
+    width: 100%;
+}
+
+.box:hover {
+    border: 1px solid var(--main-color);
+    box-shadow: 3px 4px 2px  rgba(177, 224, 230, .2);
+    opacity: 1;
+}
+
+.clear-both {
+    clear: both;
+}
+
+
+
+/* Contact page */
+.box-width {
+    width: 100%;
+    border: 1px solid #dddddd;
+    padding: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+}
+
+.box-width:hover {
+    border: 1px solid var(--main-color);
+    box-shadow: 2px 2px 8px  #B0E0E6;
+}
+
+
+.btn {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 8px 25px;
+    border: 1px solid var(--main-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+    box-shadow: 2px 2px 8px  #B0E0E6;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/* Media Queries screen at 979px - 768px*/
+@media screen and (max-width: 979px) {
+    :root {
+        --container-left: 30px;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
+
+/* Media Queries screen at 767px to 640px*/
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+    
+    .top-name {
+        float: none;
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu {
+        float: none;
+        margin: var(--nav-padding) auto;
+        width: 300px;
+    }
+
+    .menu li {
+        font-size: 20px;
+    }
+
+    #me-pic {
+        float: none;
+        display: block;
+        margin: 20px auto;
+        width: 85%;
+    }
+
+    .box {
+        float: none;
+        width: 90%;
+        margin: 40px;
+    }
+}
+
+
+/* Media Queries screen at 639px or smaller*/
+@media screen and (max-width: 639px) {
+    nav,
+    footer,
+    .container {
+        width: 640px;
+    }
+
+}
