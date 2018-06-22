@@ -160,15 +160,16 @@ footer {
 
 
 /* Portfoilo page */
-.box img {
+.port {
     width: 100%;
+    transition: opacity ease-out 300ms;
+    opacity: .7;
 }
 
 .box {
     width: 44%;
     float: left;
     margin: 20px;
-    opacity: .7;
     position: relative;
     box-sizing: border-box;
 }
@@ -184,13 +185,18 @@ footer {
     top: 60%;
     z-index: 2;
     width: 100%;
+    transition: opacity ease-out 250ms;
 }
 
-.box:hover {
+.box:hover .port{
     border: 1px solid var(--main-color);
-    box-shadow: 3px 4px 2px  rgba(177, 224, 230, .2);
     opacity: 1;
 }
+
+.box:hover .title {
+    opacity: 0;
+}
+
 
 .clear-both {
     clear: both;
